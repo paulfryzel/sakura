@@ -18,7 +18,7 @@ class BloomFilterSpec extends Specification {
     "not contain the element sakura" in {
       bf.query("sakura") must_== false
     }
-    "have a size of 5" in {
+    "have a total occupied bucket size of 5" in {
       bf.size must_== 5
     }
   }
@@ -27,7 +27,7 @@ class BloomFilterSpec extends Specification {
     "be empty" in {
       ebf.isEmpty must_== true
     }
-    "have a size of 0" in {
+    "have a total occupied bucket size of 0" in {
       ebf.size must_== 0
     }
   }

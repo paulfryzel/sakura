@@ -9,14 +9,6 @@ import scala.util.MurmurHash3
  * see: http://en.wikipedia.org/wiki/Bloom_filter
  */
 object BloomFilter {
-  /*
-   * Constructs an empty BloomFilter
-   *
-   * @return a new empty BloomFilter
-   */
-  def emptyFilter() = {
-    new BloomFilter(0, 0)
-  }
 
   /*
    * Constructs a BloomFilter
@@ -29,6 +21,15 @@ object BloomFilter {
     new BloomFilter(m, k)
   }
 
+  /*
+   * Constructs an empty BloomFilter
+   *
+   * @return a new empty BloomFilter
+   */
+  def emptyFilter() = {
+    new BloomFilter(0, 0)
+  }
+
   private val EXCESS = 20
 }
 
@@ -37,21 +38,10 @@ class BloomFilter(m: Int, k: Int) extends BloomFilterLike {
   private[this] val buckets = new BitSet(capacity)
   private[this] val hasher = new MurmurHash3
 
-  /*
-   * Add an element to the BloomFilter
-   *
-   * @param element element to add
-   */
   override def add(element: String) {
     hash(element).foreach(buckets += _)
   }
 
-  /*
-   * Query for elements existance within the BloomFilter
-   *
-   * @param element to query
-   * @return true if element is found, false otherwise
-   */
   override def query(element: String): Boolean = {
     for (i <- hash(element)) {
       if (!buckets.contains(i)) return false
