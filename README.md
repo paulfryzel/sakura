@@ -1,6 +1,6 @@
 # 桜 Sakura
 
-An experimental Bloom filter library implemented in Scala, hashed using MurmurHash3.
+An experimental Bloom filter library implemented in Scala, hashed using MurmurHash3. [![Build Status](https://secure.travis-ci.org/paulfryzel/sakura.png?branch=master)](http://travis-ci.org/paulfryzel/sakura)
 
 see: http://en.wikipedia.org/wiki/Bloom_filter
 
