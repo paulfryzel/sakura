@@ -11,5 +11,5 @@ Project built with Scala 2.9.1 and sbt 0.11.2
 - [Cassandra BloomFilter](https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/utils/BloomFilter.java)
 
 ## Resources
-- [Less Hashing, Same Performance: Building a Better Bloom Filter](http://www.eecs.harvard.edu/~kirsch/pubs/bbbf/esa06.pdf)
+- [Less Hashing, Same Performance: Building a Better Bloom Filter](https://www.eecs.harvard.edu/~michaelm/postscripts/tr-02-05.pdf)
 - [Bloom Filters - the math](http://pages.cs.wisc.edu/~cao/papers/summary-cache/node8.html)
