@@ -51,7 +51,7 @@ class BloomFilter(m: Int, k: Int) extends BloomFilterLike {
 
   /*
    * Hash element into k-buckets using two hash functions
-   * see: http://www.eecs.harvard.edu/~kirsch/pubs/bbbf/esa06.pdf
+   * see: https://www.eecs.harvard.edu/~michaelm/postscripts/tr-02-05.pdf
    */
   private[this] def hash(element: String): Array[Int] = {
     val h1 = hasher.stringHash(element, 0)
